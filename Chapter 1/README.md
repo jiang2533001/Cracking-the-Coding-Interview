@@ -18,3 +18,7 @@ __Solution:__ Use for loop to scan the whole string and stop when the index char
 ### 1.4 Palinderome Permutation:
 
 __Solution:__ Use hash table to store how many times each character appears, and then check the number of odd counts. If there are two or more odd counts, which means this string cannot be a palinderome. The time complexity is `O(n)` 
+
+### 1.5 One Away:
+
+__Solution:__

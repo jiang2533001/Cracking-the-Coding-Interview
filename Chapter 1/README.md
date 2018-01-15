@@ -5,8 +5,6 @@ __Solution 1:__ Use hash table to store each character and then check identical 
 
 __Solution 2:__ Use a array of boolean value for all characters. If a character appear, then the index of character (also the ASCII) will store the true value. So to use this array to check string. The time complexity is also `O(n)`
 
-
-
 ### 1.2 Check Permutation:
 
 __Solution:__ Use hash table to store the count of each character, thus the character is the key and value is the count. Then to use this hash table to check another string, and to decrease the count if the string has the same character. If the value is negative, which means there are extra character in this string. The time complexity is `O(n)`
@@ -21,4 +19,9 @@ __Solution:__ Use hash table to store how many times each character appears, and
 
 ### 1.5 One Away:
 
-__Solution:__
+__Solution:__ Check the length of each string and choose the longer length as size of a for loop firstly. To go through these two strings and compare each character, if these two characters are different at the same index, to compare remaining characters. 
+
+### 1.6 String Compression:
+
+__Solution:__ Scan the whole string, and store a current character in a independent variable because it will be used to compare next character. To increase the count until the a charcter is not equal the 'current character', which means it is a new character, so we have to restart count. Focus on string concatenation situation in this problem. 
+ 

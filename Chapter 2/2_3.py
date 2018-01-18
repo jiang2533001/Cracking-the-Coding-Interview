@@ -1,17 +1,18 @@
 from linked_list import LinkedList
 def main():
     l_l = LinkedList()
-    items = range(1, 10)
+    items = range(1, 11)
     map(l_l.add_node_tail, items)
+    l_l.print_list() 
     
-    solution(l_l)
+    solution(node)
     l_l.print_list()
 
 def solution(l_l):
     pointer_1 = l_l.head
     pointer_2 = l_l.tail
     
-    while pointer_1 != pointer_2 or pointer_1 != pointer_2.prev:
+    while pointer_1 != pointer_2 and pointer_1.next != pointer_2:
         pointer_1 = pointer_1.next
         pointer_2 = pointer_2.prev
         

@@ -37,24 +37,18 @@ class LinkedList(object):
         self.size -= 1
   
     def contain_element(self, val):
-        if self.is_empty():
-            print 'The linked list is empty!'
-        else:
-            current = self.head.next
-            for i in range(self.size):
-                if current.data == val:
-                    return True
+        current = self.head.next
+        while current.next != None:
+            if current.data == val:
+                return True
                 
-                current = current.next
-            return False
+            current = current.next
+        return False
 
     def print_list(self):
-        if self.is_empty():
-            print 'The linked list is empty!'
-        else:
-            current = self.head.next
-            for i in range(self.size-1):
-                print str(current.data) + ' ->',
-                current = current.next
+        current = self.head.next
+        while current.next.next != None:
+            print str(current.data) + ' ->',
+            current = current.next
 
-            print current.data
+        print current.data

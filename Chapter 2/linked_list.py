@@ -30,22 +30,12 @@ class LinkedList(object):
         node.prev.next = node
         self.size += 1
 
-    def delete(self, index):
-        if self.is_empty():
-            print 'The linked list is empty!'
-        else:
-            if index > self.size:
-                print 'The index is out of range of linked list!'
-            else:    
-                current = self.head
-                for i in range(index):
-                    current = current.next 
-                
-                current.next.prev = current.prev
-                current.prev.next = current.next
-                del current
-                self.size -= 1
-    
+    def delete_node(self, node):
+        node.next.prev = node.prev
+        node.prev.next = node.next
+        del node
+        self.size -= 1
+  
     def contain_element(self, val):
         if self.is_empty():
             print 'The linked list is empty!'

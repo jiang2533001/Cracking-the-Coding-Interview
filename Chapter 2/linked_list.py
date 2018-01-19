@@ -48,7 +48,7 @@ class LinkedList(object):
     def print_list(self):
         current = self.head.next
         while current.next.next != None:
-            print str(current.data) + ' ->',
+            print current.data, '->',
             current = current.next
 
         print current.data

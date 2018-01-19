@@ -21,7 +21,7 @@ def solution_1(l_l, k):
     current = l_l.head.next
     index = 1
     found = False
-    while current != l_l.tail:
+    while current.next != None:
         if index == k:
             found = True
         

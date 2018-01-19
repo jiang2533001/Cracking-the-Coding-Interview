@@ -4,13 +4,11 @@ def main():
     l_1 = LinkedList()
     l_2 = LinkedList()
 
-    l_1.add_node_tail(7)
-    l_1.add_node_tail(1)
-    l_1.add_node_tail(6)
-
-    l_2.add_node_tail(5)
-    l_2.add_node_tail(9)
-    l_2.add_node_tail(2)
+    items_1 = [7, 1, 6]
+    items_2 = [5, 9, 2]
+    
+    map(l_1.add_node_tail, items_1)
+    map(l_2.add_node_tail, items_2)
 
     l_1.print_list(), l_2.print_list()
     
@@ -20,13 +18,8 @@ def main():
     l_3 = LinkedList()
     l_4 = LinkedList()
 
-    l_3.add_node_tail(6)
-    l_3.add_node_tail(1)
-    l_3.add_node_tail(7)
-
-    l_4.add_node_tail(2)
-    l_4.add_node_tail(9)
-    l_4.add_node_tail(5)
+    map(l_3.add_node_head, items_1)
+    map(l_4.add_node_head, items_2)
 
     l_3.print_list(), l_4.print_list()
     

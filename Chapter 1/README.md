@@ -1,4 +1,4 @@
-# Solution
+# Chapter 1 Solution
 ### 1.1 Is Unique
 
 __Solution 1:__ Use hash table to store each character and then check identical character exist in this hash table, since the time complexity is  `O(n)`.

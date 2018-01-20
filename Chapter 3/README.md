@@ -1,4 +1,4 @@
-# Chapter 3 Solution
+# Chapter 3 Stacks and Queues
 
 
 

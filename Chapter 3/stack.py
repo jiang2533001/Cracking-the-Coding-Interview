@@ -24,7 +24,8 @@ class Stack(object):
             return val
 
     def front(self):
-        return self.list[self.head]
+        if not self.is_empty():
+            return self.list[self.head]
 
     def print_stack(self):
         print '[',

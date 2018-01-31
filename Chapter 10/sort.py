@@ -1,3 +1,4 @@
+# bubble sort
 def bubble(l):
     for i in range(len(l)-1, 0, -1):
         for j in range(i):
@@ -5,6 +6,7 @@ def bubble(l):
                 l[j], l[j+1] = l[j+1], l[j]
     return l
 
+# selection sort
 def selection(l):
     for i in range(len(l)-1):
         jmin = i
@@ -17,6 +19,7 @@ def selection(l):
     
     return l
 
+# insert sort
 def insert(l):
     for i in range(1, len(l)):
         temp = l[i]
@@ -27,6 +30,7 @@ def insert(l):
                 break
     return l
 
+# quick sort
 def quick(l):
     return quick_sort(l, 0, len(l)-1)
 
@@ -50,6 +54,31 @@ def partition(l, left, right):
     return i + 1
 
 def merge(l):
+    if len(l) > 1:
+        mid = len(l)//2
+        left_half = l[:mid]
+        right_half = l[mid:]
 
+        merge(left_half)
+        merge(right_half)
+
+        i = 0
+        j = 0
+        k = 0
+
+        while i < len(left_half) and j < len(right_half):
+            if left_haft[i] < right_half[i]:
+                l[k] = left_half[i]
+                i = i + 1
+            else:
+                l[k] = right_half[j]
+                j = j + 1
+            
+            k = k + 1
+        
+        while i < len(left_half):
+            l[k] = right_half[j]
+            j = j + 1
+            k = k + 1
 
 

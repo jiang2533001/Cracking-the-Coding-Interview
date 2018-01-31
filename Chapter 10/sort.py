@@ -17,5 +17,17 @@ def selection(l):
     
     return l
 
+def insert(l):
+    for i in range(1, len(l)):
+            temp = l[i]
+            for j in range(i-1, -1, -1):
+                if l[j] > temp:
+                    l[i], l[i+1] = l[i+1], l[i]
+                else:
+                    break
+    return l
+
+def merge(l):
+
 
 
